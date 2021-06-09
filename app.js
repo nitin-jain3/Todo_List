@@ -49,10 +49,16 @@ app.get("/work", function (req, res) {
     });
 });
 
+
+
 app.post("/work", function (res, req) {
     let item = req.body.newItems;
     workItems.push(item);
     res.redirect("/work");
+});
+
+app.get("/about", function (req, res) {
+    res.render("about");
 });
 
 app.listen(3000, function () {
